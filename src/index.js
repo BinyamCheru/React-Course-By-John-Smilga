@@ -1,19 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import "./index.css";
 const BookList = () => {
   return (
-    <section>
+    <section className="bookList">
       <Book />
-      <Book />;
-      <Book />;
+      <Book />
+      <Book />
     </section>
   );
 };
 
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -27,9 +27,9 @@ const Image = () => {
       alt="The Let Them Theory"
     />
   );
-}
-const Title = () => <h2>The Let Them Theory</h2>;
-const Author = () => <h3>Mel Robbins</h3>;
+};
+const Title = () => <h2>The Let Them Theory</h2>
+const Author = () => <h3>Mel Robbins</h3>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
