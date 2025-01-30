@@ -26,8 +26,8 @@ const BookList = () => {
   return (
     <section className="bookList">
       {books.map((book) => {
-        const { img, title, author, id } = book;
-        return <Book img={img} title={title} author={author} key={id} />;
+        // return <Book book={book} key={book.id} />; this is option one without using spread operator
+        return <Book {...book} key={book.id} />;
       })}
     </section>
   );
@@ -35,6 +35,7 @@ const BookList = () => {
 
 const Book = (props) => {
   const { img, title, author } = props;
+  // const { img, title, author } = props.book; without using spread operator
   return (
     <article className="book">
       <img src={img} alt={title} />
