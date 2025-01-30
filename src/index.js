@@ -1,47 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+const books = [
+  {
+    img: "./images/book-1.jpg",
+    title: "The Let Them Theory",
+    author: "Mel Robbins",
+  },
+  {
+    img: "./images/book-2.jpg",
+    title: "The Crash",
+    author: "Freida McFadden",
+  },
+  {
+    img: "./images/book-3.jpg",
+    title: "Brimstone (Deluxe Limited Edition)",
+    author: "Callie Hart",
+  },
+];
 
-const firstBook = {
-  img: "./images/book-1.jpg",
-  title: "The Let Them Theory",
-  author: "Mel Robbins",
-};
-const secondBook = {
-  img: "./images/book-2.jpg",
-  title: "The Crash",
-  author: "Freida McFadden",
-};
-const thirdBook = {
-  img: "./images/book-3.jpg",
-  title: "Brimstone (Deluxe Limited Edition)",
-  author: "Callie Hart",
-};
+const names = ["john", "spencer", "peter"];
+// const newNames = names.map((name) => {
+//   console.log(name);
+//   return <h1> {name} </h1>
+// });
 
 const BookList = () => {
   return (
     <section className="bookList">
-      <Book
-        img={firstBook.img}
-        title={firstBook.title}
-        author={firstBook.author}
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, nulla.
-        </p>
-        <button>Click Me</button>
-      </Book>
-
-      <Book
-        img={secondBook.img}
-        title={secondBook.title}
-        author={secondBook.author}
-      />
-      <Book
-        img={thirdBook.img}
-        title={thirdBook.title}
-        author={thirdBook.author}
-      />
+      {names.map((name)=>{
+        return <h1> {name} </h1>
+      })}
     </section>
   );
 };
