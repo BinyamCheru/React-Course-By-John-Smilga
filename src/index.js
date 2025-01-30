@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// function Greeting() {
+//   return <h1>My First Component</h1>;
+// }
 
-function Greeting() {
-  return <h2>DO you work offline</h2>;
-}
+// we can use an arrow function also
+const Greeting = () => {
+  return <h1>My First Component</h1>;
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Greeting />);
+root.render(<Greeting/>)
