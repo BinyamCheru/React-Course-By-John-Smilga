@@ -6,9 +6,9 @@ import ReactDOM from "react-dom/client";
 
 // we can use an arrow function also
 const Greeting = () => {
-  return <h1>My First Component</h1>;
+  return React.createElement("h2", {}, "Hello form React.createElement()");
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Greeting/>)
+root.render(<Greeting />);
