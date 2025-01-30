@@ -21,15 +21,10 @@ const Book = () => {
   );
 };
 const Image = () => {
-  return (
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/I/91I1KDnK1kL._AC_UL600_SR600,400_.jpg"
-      alt="The Let Them Theory"
-    />
-  );
+  return <img src="./images/book-2.jpg" alt="The Let Them Theory" />;
 };
-const Title = () => <h2>The Let Them Theory</h2>
-const Author = () => <h3>Mel Robbins</h3>
+const Title = () => <h2>The Let Them Theory</h2>;
+const Author = () => <h3>Mel Robbins</h3>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
