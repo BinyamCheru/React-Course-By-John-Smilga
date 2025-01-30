@@ -7,19 +7,17 @@ import ReactDOM from "react-dom/client";
 // we can use an arrow function also
 const Greeting = () => {
   return (
-    <React.Fragment> // short cut <></>
-      <div>
-        <h1>Fruits: </h1>
-        <ul>
-          <li>Orange</li>
-          <li>Banana</li>
-          <li>Mango</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Another div which is a parent this going to throw an error</h2>
-      </div>
-    </React.Fragment>
+    <div>
+      <Heading />
+      <Paragraph />
+    </div>
+  );
+};
+
+const Heading = () => <h1>This Heading</h1>;
+const Paragraph = () => {
+  return (
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aliquam!</p>
   );
 };
 
