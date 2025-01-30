@@ -1,23 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+const img = "./images/book-2.jpg";
+const title = "The Let Them Theory";
+const author = "Mel Robbins";
+
 const BookList = () => {
   return (
     <section className="bookList">
-      <Book />
-      <Book />
-      <Book />
+      <Book img={img} title={title} author={author} />
+      <Book img={img} title={title} author={author} />
+      <Book img={img} title={title} author={author} />
     </section>
   );
 };
-const author = "Mel Robbins";
-const Book = () => {
-  const title = "The Let Them Theory";
+
+const Book = (props) => {
   return (
     <article className="book">
-      <img src="./images/book-2.jpg" alt="The Let Them Theory" />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
+      <img src={props.img} alt={props.title} />
+      <h2>{props.title}</h2>
+      <h4>{props.author}</h4>
     </article>
   );
 };
