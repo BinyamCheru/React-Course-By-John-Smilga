@@ -6,16 +6,19 @@ const books = [
     img: "./images/book-1.jpg",
     title: "The Let Them Theory",
     author: "Mel Robbins",
+    id: 1,
   },
   {
     img: "./images/book-2.jpg",
     title: "The Crash",
     author: "Freida McFadden",
+    id: 2,
   },
   {
     img: "./images/book-3.jpg",
     title: "Brimstone (Deluxe Limited Edition)",
     author: "Callie Hart",
+    id: 3,
   },
 ];
 
@@ -23,8 +26,8 @@ const BookList = () => {
   return (
     <section className="bookList">
       {books.map((book) => {
-        const { img, title, author } = book;
-        return <Book img={img} title={title} author={author} />;
+        const { img, title, author, id } = book;
+        return <Book img={img} title={title} author={author} key={id} />;
       })}
     </section>
   );
