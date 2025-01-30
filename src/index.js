@@ -6,7 +6,17 @@ import ReactDOM from "react-dom/client";
 
 // we can use an arrow function also
 const Greeting = () => {
-  return React.createElement("h2", {}, "Hello form React.createElement()");
+  return (
+    <div>
+      <h1>Fruits: </h1>
+      <ul>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+      </ul>
+    </div>
+    // <div><h2>Another div which is a parent this going to throw an error</h2></div>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
