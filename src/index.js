@@ -23,9 +23,9 @@ const books = [
 ];
 
 const BookList = () => {
-  const someValue = "shakeAndBake";
-  const displayValue = () => {
-    console.log(someValue);
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id);
+    console.log(book);
   };
   return (
     <>
@@ -33,7 +33,7 @@ const BookList = () => {
       <section className="bookList">
         {books.map((book) => {
           // return <Book book={book} key={book.id} />; this is option one without using spread operator
-          return <Book {...book} key={book.id} displayValue={displayValue} />;
+          return <Book {...book} key={book.id} getBook={getBook} />;
         })}
       </section>
     </>
@@ -78,13 +78,16 @@ const EventExample = () => {
   );
 };
 const Book = (props) => {
-  const { img, title, author, displayValue } = props;
-
+  const { img, title, author, getBook, id } = props;
+  // const getSingleBook=()=>{
+  //   getBook(id);
+  // }
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={displayValue}>Display Title</button>
+      {/* another option using callback function  */}
+      <button onClick={/*getSingleBook*/ ()=>getBook(id)}>Display Title</button>
       <h4>{author}</h4>
     </article>
   );
