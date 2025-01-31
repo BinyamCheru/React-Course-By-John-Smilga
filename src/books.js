@@ -1,4 +1,4 @@
-export const books = [
+const books = [
   {
     img: "./images/book-1.jpg",
     title: "The Let Them Theory",
@@ -18,3 +18,5 @@ export const books = [
     id: 3,
   },
 ];
+
+export default books;
