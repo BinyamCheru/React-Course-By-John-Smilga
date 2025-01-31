@@ -6,12 +6,15 @@ import Book from "./Book";
 
 const BookList = () => {
   return (
+    <>
+    <h1>Amazon Best Seller</h1>
       <section className="bookList">
         {bananas.map((book) => {
           // return <Book book={book} key={book.id} />; this is option one without using spread operator
           return <Book {...book} key={book.id} />;
         })}
       </section>
+        </>
   );
 };
 
